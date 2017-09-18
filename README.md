@@ -1,6 +1,6 @@
 # Laravel 5 WooCommerce API Client
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/mindsize/laravel5-woocommerce.svg?style=flat-square)](https://packagist.org/packages/mindsize/laravel5-woocommerce)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/Mindsize/laravel5-woocommerce.svg?style=flat-square)](https://packagist.org/packages/mindsize/laravel5-woocommerce)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![Travis Build](https://img.shields.io/travis/Mindsize/laravel5-woocommerce/master.svg?style=flat-square)](https://travis-ci.org/Mindsize/laravel5-woocommerce)
 [![Total Downloads](https://img.shields.io/packagist/dt/mindsize/laravel5-woocommerce.svg?style=flat-square)](https://packagist.org/packages/mindsize/laravel5-woocommerce)
