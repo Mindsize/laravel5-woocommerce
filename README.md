@@ -12,7 +12,7 @@ A simple Laravel 5 wrapper for the [official WooCommerce REST API PHP Library](h
 ### Step 1: Install Through Composer
 
 ``` bash
-composer require mindsize/laravel5-woocommerce ^3.0
+composer require mindsize/laravel5-woocommerce
 ```
 
 ### Step 2: Publish configuration
