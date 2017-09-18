@@ -1,9 +1,10 @@
-<?php namespace Pixelpeter\Woocommerce;
+<?php
+namespace Mindsize\WC;
 
 use Automattic\WooCommerce\Client;
 use Illuminate\Support\ServiceProvider;
 
-class WoocommerceServiceProvider extends ServiceProvider
+class ServiceProvider extends ServiceProvider
 {
     /**
      * Indicates if loading of the provider is deferred.
@@ -55,10 +56,10 @@ class WoocommerceServiceProvider extends ServiceProvider
                 ]);
         });
 
-        $app->singleton('Pixelpeter\Woocommerce\WoocommerceClient', function($app) {
-            return new WoocommerceClient($app['woocommerce.client']);
+        $app->singleton('Mindsize\WC\API', function($app) {
+            return new API($app['woocommerce.client']);
         });
 
-        $app->alias('Pixelpeter\Woocommerce\WoocommerceClient', 'woocommerce');
+        $app->alias('Mindsize\WC\API', 'woocommerce');
     }
 }

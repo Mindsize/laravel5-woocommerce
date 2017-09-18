@@ -1,11 +1,12 @@
-<?php namespace Pixelpeter\Woocommerce;
+<?php
+namespace Mindsize\WC;
 
 use Automattic\WooCommerce\Client;
 
 /**
  * @property mixed config
  */
-class WoocommerceClient
+class API
 {
     /**
      * @var \Automattic\WooCommerce\Client
@@ -14,7 +15,7 @@ class WoocommerceClient
 
     /**
      */
-    public function __construct(Client $client)
+    public function __construct($client)
     {
         $this->client = $client;
     }

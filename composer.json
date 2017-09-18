@@ -1,6 +1,6 @@
 {
-  "name": "pixelpeter/laravel5-woocommerce-api-client",
-  "description": "Laravel 5 wrapper for the Woocommerce REST API",
+  "name": "mindsize/laravel5-woocommerce",
+  "description": "WooCommerce API Client for Laravel 5",
   "keywords": [
     "laravel",
     "wordpress",
@@ -8,13 +8,19 @@
     "rest",
     "api"
   ],
-  "homepage": "https://github.com/pixelpeter/laravel5-woocommerce-api-client",
+  "homepage": "https://github.com/Mindsize/laravel5-woocommerce",
   "license": "MIT",
   "authors": [
     {
-      "name": "Peter Haak",
-      "email": "info@pixelpeter.de",
-      "homepage": "https://pixelpeter.de/",
+      "name": "Mindsize",
+      "email": "info@mindsize.me",
+      "homepage": "https://mindsize.me/",
+      "role": "Agency"
+    },
+    {
+      "name": "Patrick Garman",
+      "email": "patrick@mindsize.me",
+      "homepage": "https://mindsize.me/",
       "role": "Developer"
     }
   ],
@@ -24,12 +30,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Pixelpeter\\Woocommerce\\": "src"
+      "Mindsize\\WC\\": "src"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Pixelpeter\\Woocommerce\\Test\\": "tests"
+      "Mindsize\\WC\\Test\\": "tests"
     }
   },
   "require-dev": {
@@ -40,10 +46,10 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Pixelpeter\\Woocommerce\\WoocommerceServiceProvider"
+        "Mindsize\\WC\\WCServiceProvider"
       ],
       "aliases": {
-        "Woocommerce": "Pixelpeter\\Woocommerce\\Facades\\Woocommerce"
+        "WC": "Mindsize\\WC\\Facades\\WC"
       }
     }
   }

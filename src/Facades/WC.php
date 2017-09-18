@@ -1,8 +1,9 @@
-<?php namespace Pixelpeter\Woocommerce\Facades;
+<?php
+namespace Mindsize\WC\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class Woocommerce extends Facade
+class WC extends Facade
 {
     /**
      * Get the registered name of the component.
@@ -11,6 +12,6 @@ class Woocommerce extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'woocommerce';
+        return 'wc';
     }
 }

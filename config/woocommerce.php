@@ -6,54 +6,54 @@ return [
     | Home URL to the store you want to connect to here
     |--------------------------------------------------------------------------
     */
-    'store_url' => env('WOOCOMMERCE_STORE_URL', 'http://example.org/'),
+    'store_url' => env('WC_STORE_URL', 'http://example.org/'),
 
     /*
     |--------------------------------------------------------------------------
     | Consumer Key
     |--------------------------------------------------------------------------
     */
-    'consumer_key' => env('WOOCOMMERCE_CONSUMER_KEY', 'YOUR_CONSUMER_KEY'),
+    'consumer_key' => env('WC_CONSUMER_KEY', 'ck_your_consumer_key'),
 
     /*
     |--------------------------------------------------------------------------
     | Consumer Secret
     |--------------------------------------------------------------------------
     */
-    'consumer_secret' => env('WOOCOMMERCE_CONSUMER_SECRET', 'YOUR_CONSUMER_SECRET'),
+    'consumer_secret' => env('WC_CONSUMER_SECRET', 'cs_your_consumer_secret'),
 
     /*
     |--------------------------------------------------------------------------
     | SSL support
     |--------------------------------------------------------------------------
     */
-    'verify_ssl' => env('WOOCOMMERCE_VERIFY_SSL', false),
+    'verify_ssl' => env('WC_VERIFY_SSL', false),
 
     /*
     |--------------------------------------------------------------------------
     | API version
     |--------------------------------------------------------------------------
     */
-    'api_version' => env('WOOCOMMERCE_VERSION', 'v2'),
+    'api_version' => env('WC_VERSION', 'v2'),
 
     /*
     |--------------------------------------------------------------------------
     | WP API usage
     |--------------------------------------------------------------------------
     */
-    'wp_api' => env('WOOCOMMERCE_WP_API', true),
+    'wp_api' => env('WC_WP_API', true),
 
     /*
     |--------------------------------------------------------------------------
     | Force Basic Authentication as query string
     |--------------------------------------------------------------------------
     */
-    'query_string_auth' => env('WOOCOMMERCE_WP_QUERY_STRING_AUTH', false),
+    'query_string_auth' => env('WC_WP_QUERY_STRING_AUTH', false),
 
     /*
     |--------------------------------------------------------------------------
     | WP timeout
     |--------------------------------------------------------------------------
     */
-    'timeout' => env('WOOCOMMERCE_WP_TIMEOUT', 15),
+    'timeout' => env('WC_WP_TIMEOUT', 15),
 ];

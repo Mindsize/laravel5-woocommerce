@@ -1,5 +1,6 @@
 # The MIT License (MIT)
 
+Copyright (c) 2017 Mindsize <contact@mindsize.me>
 Copyright (c) 2016 Peter Haak <info@pixelpeter.de>
 
 > Permission is hereby granted, free of charge, to any person obtaining a copy
