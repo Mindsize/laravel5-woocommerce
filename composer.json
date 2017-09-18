@@ -46,7 +46,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Mindsize\\WC\\WCServiceProvider"
+        "Mindsize\\WC\\ServiceProvider"
       ],
       "aliases": {
         "WC": "Mindsize\\WC\\Facades\\WC"
