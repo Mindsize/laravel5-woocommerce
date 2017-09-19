@@ -33,17 +33,15 @@ class ServiceProvider extends IlluminateServiceProvider
      */
     public function register()
     {
-        $app = $this->app;
-
         // merge default config
         $this->mergeConfigFrom(
             __DIR__ . '/../config/woocommerce.php',
             'woocommerce'
         );
 
-        $config = $app['config']->get('woocommerce');
+        $config = $this->app['config']->get('woocommerce');
 
-        $app->singleton('woocommerce.client', function() use ($config) {
+        $this->app->singleton('woocommerce.client', function() use ($config) {
             return new Client(
                 $config['store_url'],
                 $config['consumer_key'],
@@ -57,10 +55,10 @@ class ServiceProvider extends IlluminateServiceProvider
                 ]);
         });
 
-        $app->singleton('Mindsize\WooCommerce\API', function($app) {
+        $this->app->singleton('Mindsize\WooCommerce\API', function($app) {
             return new API($app['woocommerce.client']);
         });
 
-        $app->alias('Mindsize\WooCommerce\API', 'woocommerce');
+        $this->app->alias('Mindsize\WooCommerce\API', 'woocommerce');
     }
 }
