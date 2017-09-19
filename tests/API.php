@@ -1,15 +1,14 @@
 <?php
-namespace Mindsize\WC\Test;
+namespace Mindsize\WooCommerce\Test;
 
+use Mindsize\WooCommerce\API;
 use Mockery;
-use PHPUnit_Framework_TestCase;
-use Mindsize\WC\Facades\WC;
-use Mindsize\WC\API;
+use PHPUnit\Framework\TestCase;
 
 /**
  * @property Mockery\MockInterface client
  */
-class APITest extends \PHPUnit\Framework\TestCase
+class APITest extends TestCase
 {
     /**
      * set up

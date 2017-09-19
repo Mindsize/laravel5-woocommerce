@@ -1,10 +1,11 @@
 <?php
-namespace Mindsize\WC;
+
+namespace Mindsize\WooCommerce;
 
 use Automattic\WooCommerce\Client;
-use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\ServiceProvider as IlluminateServiceProvider;
 
-class ServiceProvider extends ServiceProvider
+class ServiceProvider extends IlluminateServiceProvider
 {
     /**
      * Indicates if loading of the provider is deferred.
@@ -56,10 +57,10 @@ class ServiceProvider extends ServiceProvider
                 ]);
         });
 
-        $app->singleton('Mindsize\WC\API', function($app) {
+        $app->singleton('Mindsize\WooCommerce\API', function($app) {
             return new API($app['woocommerce.client']);
         });
 
-        $app->alias('Mindsize\WC\API', 'woocommerce');
+        $app->alias('Mindsize\WooCommerce\API', 'woocommerce');
     }
 }

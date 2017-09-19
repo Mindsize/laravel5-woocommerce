@@ -1,5 +1,6 @@
 <?php
-namespace Mindsize\WC;
+
+namespace Mindsize\WooCommerce;
 
 use Automattic\WooCommerce\Client;
 

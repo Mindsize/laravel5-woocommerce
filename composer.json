@@ -30,12 +30,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Mindsize\\WC\\": "src"
+      "Mindsize\\WooCommerce\\": "src"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Mindsize\\WC\\Test\\": "tests"
+      "Mindsize\\WooCommerce\\Test\\": "tests"
     }
   },
   "require-dev": {
@@ -46,10 +46,10 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Mindsize\\WC\\ServiceProvider"
+        "Mindsize\\WooCommerce\\ServiceProvider"
       ],
       "aliases": {
-        "WC": "Mindsize\\WC\\Facades\\WC"
+        "WooCommerce": "Mindsize\\WooCommerce\\Facades\\WooCommerce"
       }
     }
   }
