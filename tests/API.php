@@ -1,4 +1,5 @@
 <?php
+
 namespace Mindsize\WooCommerce\Test;
 
 use Mindsize\WooCommerce\API;
@@ -30,12 +31,12 @@ class APITest extends TestCase
     /**
      * @test
      */
-    public function post_can_be_called()
+    public function postCanBeCalled()
     {
         $this->client
             ->shouldReceive('post')
             ->once()
-            ->with('someurl',['bar' => 'baz'])
+            ->with('someurl', ['bar' => 'baz'])
             ->andReturn('foo');
 
         $this->assertEquals($this->API->post('someurl', ['bar' => 'baz']), 'foo');
@@ -44,12 +45,12 @@ class APITest extends TestCase
     /**
      * @test
      */
-    public function put_can_be_called()
+    public function putCanBeCalled()
     {
         $this->client
             ->shouldReceive('put')
             ->once()
-            ->with('someurl',['bar' => 'baz'])
+            ->with('someurl', ['bar' => 'baz'])
             ->andReturn('foo');
 
         $this->assertEquals($this->API->put('someurl', ['bar' => 'baz']), 'foo');
@@ -58,12 +59,12 @@ class APITest extends TestCase
     /**
      * @test
      */
-    public function get_can_be_called()
+    public function getCanBeCalled()
     {
         $this->client
             ->shouldReceive('get')
             ->once()
-            ->with('someurl',[])
+            ->with('someurl', [])
             ->andReturn('foo');
 
         $this->assertEquals($this->API->get('someurl'), 'foo');
@@ -72,12 +73,12 @@ class APITest extends TestCase
     /**
      * @test
      */
-    public function delete_can_be_called()
+    public function deleteCanBeCalled()
     {
         $this->client
             ->shouldReceive('delete')
             ->once()
-            ->with('someurl',[])
+            ->with('someurl', [])
             ->andReturn('foo');
 
         $this->assertEquals($this->API->delete('someurl'), 'foo');
@@ -86,7 +87,7 @@ class APITest extends TestCase
     /**
      * @test
      */
-    public function getrequest_can_be_called()
+    public function getRequestCanBeCalled()
     {
         $this->httpClient
             ->shouldReceive('getRequest')
@@ -100,7 +101,7 @@ class APITest extends TestCase
     /**
      * @test
      */
-    public function getresponse_can_be_called()
+    public function getResponseCanBeCalled()
     {
         $this->httpClient
             ->shouldReceive('getResponse')
@@ -114,7 +115,7 @@ class APITest extends TestCase
     /**
      * @test
      */
-    public function pagination_first_page_returns_valid_page_number()
+    public function paginationFirstPageReturnsValidPageNumber()
     {
         $this->assertEquals($this->API->firstPage(), 1);
     }
@@ -122,7 +123,7 @@ class APITest extends TestCase
     /**
      * @test
      */
-    public function pagination_last_page_returns_valid_page_number()
+    public function paginationLastPageReturnsValidPageNumber()
     {
         $this->httpClient
             ->shouldReceive('getResponse->getHeaders')
@@ -138,7 +139,7 @@ class APITest extends TestCase
     /**
      * @test
      */
-    public function pagination_current_page_returns_first_page_when_empty()
+    public function paginationCurrentPageReturnsFirstPageWhenEmpty()
     {
         $this->httpClient
             ->shouldReceive('getRequest->getParameters')
@@ -152,7 +153,7 @@ class APITest extends TestCase
     /**
      * @test
      */
-    public function pagination_current_page_returns_valid_page_number()
+    public function paginationCurrentPageReturnsValidPageNumber()
     {
         $this->httpClient
             ->shouldReceive('getRequest->getParameters')
@@ -167,7 +168,7 @@ class APITest extends TestCase
     /**
      * @test
      */
-    public function pagination_total_results_returns_valid_number()
+    public function paginationTotalResultsReturnsValidNumber()
     {
         $this->httpClient
             ->shouldReceive('getResponse->getHeaders')
@@ -183,7 +184,7 @@ class APITest extends TestCase
     /**
      * @test
      */
-    public function pagination_total_pages_returns_valid_page_number()
+    public function paginationTotalPagesReturnsValidPageNumber()
     {
         $this->httpClient
             ->shouldReceive('getResponse->getHeaders')
@@ -199,7 +200,7 @@ class APITest extends TestCase
     /**
      * @test
      */
-    public function pagination_previous_page_is_null_when_on_first_page()
+    public function paginationPreviousPageIsNullWhenOnFirstPage()
     {
         $this->httpClient
             ->shouldReceive('getRequest->getParameters')
@@ -216,7 +217,7 @@ class APITest extends TestCase
     /**
      * @test
      */
-    public function pagination_previous_page_returns_valid_page_number()
+    public function paginationPreviousPageReturnsValidPageNumber()
     {
         $this->httpClient
             ->shouldReceive('getRequest->getParameters')
@@ -233,7 +234,7 @@ class APITest extends TestCase
     /**
      * @test
      */
-    public function pagination_next_page_is_null_when_on_last_page()
+    public function paginationNextPageIsNullWhenOnLastPage()
     {
         $this->httpClient
             ->shouldReceive('getResponse->getHeaders')
@@ -255,7 +256,7 @@ class APITest extends TestCase
     /**
      * @test
      */
-    public function pagination_next_page_returns_valid_page_number()
+    public function paginationNextPageReturnsValidPageNumber()
     {
         $this->httpClient
             ->shouldReceive('getResponse->getHeaders')

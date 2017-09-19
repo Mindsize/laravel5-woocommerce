@@ -1,4 +1,5 @@
 <?php
+
 namespace Mindsize\WC\Facades;
 
 use Illuminate\Support\Facades\Facade;
