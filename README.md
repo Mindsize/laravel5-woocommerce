@@ -17,7 +17,7 @@ composer require mindsize/laravel5-woocommerce
 
 ### Step 2: Publish configuration
 ``` bash
-php artisan vendor:publish --provider="Mindsize\WC\ServiceProvider"
+php artisan vendor:publish --provider="Mindsize\WooCommerce\ServiceProvider"
 ```
 
 ### Step 3: Customize configuration
@@ -37,16 +37,16 @@ WC_WP_TIMEOUT=15
 
 ### Get the index of all available endpoints
 ```php
-use WC;
+use WooCommerce;
 
-return WC::get('');
+return WooCommerce::get('');
 ```
 
 ### View all orders
 ```php
-use WC;
+use WooCommerce;
 
-return WC::get('orders');
+return WooCommerce::get('orders');
 ```
 
 ### View all completed orders created after a specific date
@@ -54,7 +54,7 @@ return WC::get('orders');
 (WC 2.4.x or later, WP 4.1 or later) use this syntax
 
 ```php
-use WC;
+use WooCommerce;
 
 $data = [
     'status' => 'completed',
@@ -63,7 +63,7 @@ $data = [
     ]
 ];
 
-$result = WC::get('orders', $data);
+$result = WooCommerce::get('orders', $data);
 
 foreach($result['orders'] as $order)
 {
@@ -71,7 +71,7 @@ foreach($result['orders'] as $order)
 }
 
 // you can also use array access
-$orders = WC::get('orders', $data)['orders'];
+$orders = WooCommerce::get('orders', $data)['orders'];
 
 foreach($orders as $order)
 {
@@ -84,7 +84,7 @@ foreach($orders as $order)
 `after` needs to be a ISO-8601 compliant date!≠
 
 ```php
-use WC;
+use WooCommerce;
 
 $data = [
     'status' => 'completed',
@@ -92,7 +92,7 @@ $data = [
     ]
 ];
 
-$result = WC::get('orders', $data);
+$result = WooCommerce::get('orders', $data);
 
 foreach($result['orders'] as $order)
 {
@@ -100,7 +100,7 @@ foreach($result['orders'] as $order)
 }
 
 // you can also use array access
-$orders = WC::get('orders', $data)['orders'];
+$orders = WooCommerce::get('orders', $data)['orders'];
 
 foreach($orders as $order)
 {
@@ -110,7 +110,7 @@ foreach($orders as $order)
 
 ### Update a product
 ```php
-use WC;
+use WooCommerce;
 
 $data = [
     'product' => [
@@ -118,7 +118,7 @@ $data = [
     ]
 ];
 
-return WC::put('products/1', $data);
+return WooCommerce::put('products/1', $data);
 ```
 
 ### Pagination
@@ -126,7 +126,7 @@ So you don't have to mess around with the request and response header and the ca
 (WC 2.6.x or later, WP 4.4 or later) 
 
 ```php
-use WC;
+use WooCommerce;
 
 // assuming we have 474 orders in pur result
 // we will request page 5 with 25 results per page
@@ -135,37 +135,37 @@ $params = [
     'page' => 5
 ];
 
-WC::get('orders', $params);
+WooCommerce::get('orders', $params);
 
-WC::totalResults(); // 474
-WC::firstPage(); // 1
-WC::lastPage(); // 19
-WC::currentPage(); // 5 
-WC::totalPages(); // 19
-WC::previousPage(); // 4
-WC::nextPage(); // 6
-WC::hasPreviousPage(); // true 
-WC::hasNextPage(); // true
-WC::hasNotPreviousPage(); // false 
-WC::hasNotNextPage(); // false
+WooCommerce::totalResults(); // 474
+WooCommerce::firstPage(); // 1
+WooCommerce::lastPage(); // 19
+WooCommerce::currentPage(); // 5 
+WooCommerce::totalPages(); // 19
+WooCommerce::previousPage(); // 4
+WooCommerce::nextPage(); // 6
+WooCommerce::hasPreviousPage(); // true 
+WooCommerce::hasNextPage(); // true
+WooCommerce::hasNotPreviousPage(); // false 
+WooCommerce::hasNotNextPage(); // false
 ```
 
 ### HTTP Request & Response (Headers)
 
 ```php
-use WC;
+use WooCommerce;
 
 // first send a request
-WC::get('orders');
+WooCommerce::get('orders');
 
 // get the request
-WC::getRequest();
+WooCommerce::getRequest();
 
 // get the response headers
-WC::getResponse();
+WooCommerce::getResponse();
 
 // get the total number of results
-WC::getResponse()->getHeaders()['X-WP-Total']
+WooCommerce::getResponse()->getHeaders()['X-WP-Total']
 ```
 
 

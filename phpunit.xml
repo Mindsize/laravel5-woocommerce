@@ -18,8 +18,8 @@
         <whitelist>
             <directory suffix=".php">src/</directory>
             <exclude>
-                <file>./src/WCServiceProvider.php</file>
-                <file>./src/Facades/WC.php</file>
+                <file>./src/ServiceProvider.php</file>
+                <file>./src/Facades/WooCommerce.php</file>
             </exclude>
         </whitelist>
     </filter>
