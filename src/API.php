@@ -1,19 +1,16 @@
 <?php
-namespace Mindsize\WC;
+
+namespace Mindsize\WooCommerce;
 
 use Automattic\WooCommerce\Client;
 
-/**
- * @property mixed config
- */
 class API
 {
-    /**
-     * @var \Automattic\WooCommerce\Client
-     */
+    /** @var \Automattic\WooCommerce\Client */
     protected $client;
 
     /**
+     * @param Client $client
      */
     public function __construct($client)
     {

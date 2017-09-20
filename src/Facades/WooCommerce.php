@@ -1,9 +1,10 @@
 <?php
+
 namespace Mindsize\WC\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class WC extends Facade
+class WooCommerce extends Facade
 {
     /**
      * Get the registered name of the component.
@@ -12,6 +13,6 @@ class WC extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'wc';
+        return 'woocommerce';
     }
 }
