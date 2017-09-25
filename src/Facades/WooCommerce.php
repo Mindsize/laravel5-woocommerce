@@ -1,6 +1,6 @@
 <?php
 
-namespace Mindsize\WC\Facades;
+namespace Mindsize\WooCommerce\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
